@@ -48,6 +48,19 @@ type Payer interface {
 }
 
 func Buy(p Payer) {
+
+	switch p.(type) {
+	case *Wallet:
+		fmt.Println("Cahs paying?")
+	case *Card:
+		plasticCard, ok := p.(*Card)
+		if !ok {
+			fmt.Println("failed casting to type *Card")
+		}
+		fmt.Println("Insert your card", plasticCard.CardHolder)
+	default:
+		fmt.Println("that is something new")
+	}
 	err := p.Pay(100)
 	if err != nil {
 		fmt.Printf("Error on paing %T: %v\n\n", p, err)
