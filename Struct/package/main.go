@@ -11,5 +11,4 @@ func main() {
 	//fmt.Printf("main.PrintPerson: %+v\n", p.secret)
 	secret := person.GetSecret(p)
 	fmt.Println("GetSecret", secret)
-	fmt.Println("GetSecret", secret)
 }
