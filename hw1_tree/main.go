@@ -112,6 +112,5 @@ func main() {
 	err := dirTree(out, path, printFiles)
 	if err != nil {
 		panic(err.Error())
-		fmt.Printf("lol")
 	}
 }
