@@ -21,3 +21,5 @@ func BenchmarkPreallocAppend(b *testing.B) {
 		}
 	}
 }
+
+//go test -bench . -benchmem -cpuprofile .\cpu.out -memprofile .\mem.out -memprofilerate 1 .\prealloc_test.go
