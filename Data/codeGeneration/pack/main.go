@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-//cgen: binpack
+// lets generate code for this struct
+// cgen: binpack
 type User struct {
 	ID       int
 	RealName string `cgen:"-"`
